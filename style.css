@@ -533,8 +533,14 @@ body {
 
 .social-icons{
     display:flex;flex-direction:row;justify-content:center;
-    align-items:center;gap:clamp(14px,4vw,22px);
+    align-items:center;gap:0;
     flex-wrap:nowrap;width:100%;padding:8px 0;
+}
+.social-icons .icon {
+    margin: 0 clamp(7px,2vw,11px);
+}
+.social-icons .icon-divider {
+    margin: 0;
 }
 
 .icon{
@@ -621,12 +627,14 @@ body {
 
 @media(max-width:380px){
     .icon{width:46px;height:46px;min-width:46px;font-size:20px}
-    .social-icons{gap:12px}
+    .social-icons{gap:0}
+    .social-icons .icon{margin:0 8px}
 }
 
 @media(max-width:320px){
     .icon{width:42px;height:42px;min-width:42px}
-    .social-icons{gap:10px}
+    .social-icons{gap:0}
+    .social-icons .icon{margin:0 6px}
 }
 
 .qris-overlay {
@@ -688,4 +696,13 @@ body {
 }
 .qris-note {
     color: rgba(255,215,0,0.75); font-size: 13px;
+}
+
+.icon-divider {
+    color: rgba(180,140,80,0.7);
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1;
+    align-self: center;
+    user-select: none;
 }
