@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+    <title>MJS - Fitr 1447H | 2026</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700&family=Noto+Naskh+Arabic:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="splash-screen" id="splashScreen">
+    <div class="splash-inner">
+        <div class="splash-moon"></div>
+        <div class="splash-stars">
+            <span>✦</span><span>✧</span><span>✦</span>
+            <span>✧</span><span>✦</span><span>✧</span>
+        </div>
+        <h1 class="splash-title splash-eid">Happy Eid al-Fitr Mubarak.!</h1>
+        <button class="splash-btn" id="splashBtn">
+            <span><b><i>Tap Here</i></b></span>
+        </button>
+    </div>
+    <div class="splash-bg-ketupat s1"></div>
+    <div class="splash-bg-ketupat s2"></div>
+    <div class="splash-bg-ketupat s3"></div>
+    <div class="splash-bg-ketupat s4"></div>
+</div>
+
+<div class="lebaran-bg">
+    <div class="bg-pattern">
+        <div class="ketupat ketupat1"></div>
+        <div class="ketupat ketupat2"></div>
+        <div class="ketupat ketupat3"></div>
+        <div class="ketupat ketupat4"></div>
+        <div class="ketupat ketupat5"></div>
+        <div class="ketupat ketupat6"></div>
+        <div class="star star1">✦</div><div class="star star2">✧</div>
+        <div class="star star3">✦</div><div class="star star4">✧</div>
+        <div class="star star5">✦</div><div class="star star6">✧</div>
+        <div class="crescent-moon"></div>
+        <div class="lamp-string lamp-string-left">
+            <div class="lamp-wire"></div>
+            <div class="lamp l1"></div><div class="lamp l2"></div>
+            <div class="lamp l3"></div><div class="lamp l4"></div><div class="lamp l5"></div>
+        </div>
+        <div class="lamp-string lamp-string-right">
+            <div class="lamp-wire"></div>
+            <div class="lamp l1"></div><div class="lamp l2"></div>
+            <div class="lamp l3"></div><div class="lamp l4"></div><div class="lamp l5"></div>
+        </div>
+        <div class="fanoos-container">
+            <div class="fanoos fanoos1"><div class="fanoos-body"></div><div class="fanoos-glow"></div></div>
+            <div class="fanoos fanoos2"><div class="fanoos-body"></div><div class="fanoos-glow"></div></div>
+            <div class="fanoos fanoos3"><div class="fanoos-body"></div><div class="fanoos-glow"></div></div>
+        </div>
+        <div class="city-silhouette">
+            <svg class="masjid masjid-left" viewBox="0 0 120 100" xmlns="http://www.w3.org/2000/svg">
+                <rect x="10" y="50" width="100" height="50" fill="currentColor"/>
+                <polygon points="60,10 10,50 110,50" fill="currentColor"/>
+                <rect x="50" y="55" width="20" height="45" fill="rgba(0,0,0,0.3)"/>
+                <rect x="5" y="30" width="12" height="70" fill="currentColor"/>
+                <polygon points="11,10 5,30 17,30" fill="currentColor"/>
+                <rect x="103" y="30" width="12" height="70" fill="currentColor"/>
+                <polygon points="109,10 103,30 115,30" fill="currentColor"/>
+            </svg>
+            <svg class="kabah" viewBox="0 0 100 130" xmlns="http://www.w3.org/2000/svg">
+                <rect x="10" y="30" width="80" height="100" fill="currentColor"/>
+                <rect x="10" y="55" width="80" height="4" fill="rgba(255,215,0,0.5)"/>
+                <rect x="35" y="55" width="30" height="40" rx="4" fill="rgba(255,215,0,0.4)"/>
+                <rect x="0" y="120" width="100" height="10" fill="currentColor"/>
+                <rect x="10" y="35" width="80" height="18" fill="rgba(255,215,0,0.15)"/>
+            </svg>
+            <svg class="masjid masjid-right" viewBox="0 0 160 120" xmlns="http://www.w3.org/2000/svg">
+                <rect x="20" y="55" width="120" height="65" fill="currentColor"/>
+                <ellipse cx="80" cy="55" rx="35" ry="30" fill="currentColor"/>
+                <ellipse cx="38" cy="60" rx="18" ry="15" fill="currentColor"/>
+                <ellipse cx="122" cy="60" rx="18" ry="15" fill="currentColor"/>
+                <rect x="65" y="75" width="30" height="45" rx="4" fill="rgba(0,0,0,0.3)"/>
+                <rect x="8" y="25" width="14" height="95" fill="currentColor"/>
+                <ellipse cx="15" cy="25" rx="7" ry="12" fill="currentColor"/>
+                <rect x="138" y="25" width="14" height="95" fill="currentColor"/>
+                <ellipse cx="145" cy="25" rx="7" ry="12" fill="currentColor"/>
+            </svg>
+            <svg class="masjid masjid-far-right" viewBox="0 0 100 90" xmlns="http://www.w3.org/2000/svg">
+                <rect x="15" y="45" width="70" height="45" fill="currentColor"/>
+                <ellipse cx="50" cy="45" rx="25" ry="20" fill="currentColor"/>
+                <rect x="55" y="55" width="16" height="35" fill="rgba(0,0,0,0.3)"/>
+                <rect x="5" y="28" width="10" height="62" fill="currentColor"/>
+                <ellipse cx="10" cy="28" rx="5" ry="10" fill="currentColor"/>
+                <rect x="85" y="28" width="10" height="62" fill="currentColor"/>
+                <ellipse cx="90" cy="28" rx="5" ry="10" fill="currentColor"/>
+            </svg>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+
+    <div class="envelope-thr" id="envelopeThr" style="display:none;">
+        <div class="envelope-wrap">
+
+            <div class="env-box" id="envBox">
+
+                <div class="env-flap" id="envFlap">
+                    <div class="env-flap-front">
+                        <svg viewBox="0 0 420 160" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;display:block;">
+                            <defs>
+                                <linearGradient id="flapBodyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                                    <stop offset="0%"   stop-color="#0F3D18"/>
+                                    <stop offset="100%" stop-color="#1E6B28"/>
+                                </linearGradient>
+                                <linearGradient id="flapGoldLine" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%"   stop-color="rgba(255,215,0,0)"/>
+                                    <stop offset="30%"  stop-color="rgba(255,215,0,0.6)"/>
+                                    <stop offset="70%"  stop-color="rgba(255,255,180,0.8)"/>
+                                    <stop offset="100%" stop-color="rgba(255,215,0,0)"/>
+                                </linearGradient>
+                            </defs>
+                            <polygon points="0,0 420,0 210,152" fill="url(#flapBodyGrad)"/>
+                            <line x1="0" y1="0" x2="210" y2="152" stroke="rgba(255,215,0,0.3)" stroke-width="1.5"/>
+                            <line x1="420" y1="0" x2="210" y2="152" stroke="rgba(255,215,0,0.3)" stroke-width="1.5"/>
+                            <line x1="40" y1="7" x2="380" y2="7" stroke="url(#flapGoldLine)" stroke-width="1.5"/>
+                            <text x="70"  y="44" text-anchor="middle" font-size="20" fill="rgba(255,215,0,0.5)">✦</text>
+                            <text x="210" y="58" text-anchor="middle" font-size="14" fill="rgba(255,215,0,0.4)">✧</text>
+                            <text x="350" y="44" text-anchor="middle" font-size="20" fill="rgba(255,215,0,0.5)">✦</text>
+                        </svg>
+                    </div>
+                    <div class="env-flap-back"></div>
+                </div>
+
+                <div class="env-body-box">
+                    <div class="env-side env-side-left"></div>
+                    <div class="env-side env-side-right"></div>
+                    <div class="env-bottom-fold"></div>
+                    <div class="env-inner-border"></div>
+
+                    <div class="env-center-content">
+                        <svg viewBox="0 0 400 130" xmlns="http://www.w3.org/2000/svg" style="width:90%;height:auto;display:block;margin:auto;overflow:visible;">
+                            <defs>
+                                <linearGradient id="cGold2" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%"   stop-color="rgba(255,215,0,0)"/>
+                                    <stop offset="40%"  stop-color="rgba(255,215,0,0.7)"/>
+                                    <stop offset="60%"  stop-color="rgba(255,255,180,0.9)"/>
+                                    <stop offset="100%" stop-color="rgba(255,215,0,0)"/>
+                                </linearGradient>
+                            </defs>
+                            <rect x="10" y="6" width="380" height="118" rx="8"
+                                  fill="rgba(255,255,255,0.05)" stroke="rgba(255,215,0,0.38)" stroke-width="1.5"/>
+                            <line x1="30" y1="24" x2="370" y2="24" stroke="url(#cGold2)" stroke-width="1.2"/>
+                            <line x1="30" y1="108" x2="370" y2="108" stroke="url(#cGold2)" stroke-width="1.2"/>
+                            <text x="200" y="58" text-anchor="middle"
+                                  font-family="Amiri,Noto Naskh Arabic,serif"
+                                  font-size="26" font-weight="700"
+                                  fill="rgba(255,215,0,0.95)" direction="rtl"
+                                  xml:space="preserve">ٱلسَّلَامُ عَلَيْكُمْ</text>
+                            <text x="200" y="92" text-anchor="middle"
+                                  font-family="Amiri,Noto Naskh Arabic,serif"
+                                  font-size="19" font-weight="700"
+                                  fill="rgba(255,215,0,0.80)" direction="rtl"
+                                  xml:space="preserve">وَرَحْمَةُ ٱللَّٰهِ وَبَرَكَاتُهُ</text>
+                            <circle cx="22"  cy="66" r="3.5" fill="rgba(255,215,0,0.45)"/>
+                            <circle cx="378" cy="66" r="3.5" fill="rgba(255,215,0,0.45)"/>
+                        </svg>
+                    </div>
+
+                    <div class="env-rombo-col left">
+                        <span></span><span></span><span></span><span></span>
+                    </div>
+                    <div class="env-rombo-col right">
+                        <span></span><span></span><span></span><span></span>
+                    </div>
+                </div>
+
+                <div class="env-paper-peek" id="envPaperPeek">
+                    <div class="paper-peek-inner">
+                        <p>تَقَبَّلَ اللَّهُ مِنَّا وَمِنْكُمْ</p>
+                        <span>✦ Idul Fitri 1447 H ✦</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="countdown-wrap" id="countdownWrap">
+                <div class="countdown-ring">
+                    <svg class="countdown-svg" viewBox="0 0 80 80">
+                        <defs>
+                            <linearGradient id="goldRing" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%"   stop-color="#FFD700"/>
+                                <stop offset="50%"  stop-color="#FFF3A0"/>
+                                <stop offset="100%" stop-color="#FFD700"/>
+                            </linearGradient>
+                        </defs>
+                        <circle class="countdown-track" cx="40" cy="40" r="34"/>
+                        <circle class="countdown-fill" id="countdownCircle" cx="40" cy="40" r="34"/>
+                    </svg>
+                    <span class="countdown-num" id="countdownNum">5</span>
+                </div>
+                <p class="countdown-label">amplop terbuka dalam</p>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="paper-content" id="paperContent">
+        <div class="paper-inner">
+            <div class="border-pattern"></div>
+            <div class="content">
+                <div class="arch-decoration">
+                    <svg viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10,60 Q100,-20 190,60" fill="none" stroke="#C4A27A" stroke-width="2"/>
+                        <circle cx="100" cy="12" r="5" fill="#C4A27A"/>
+                        <circle cx="60" cy="32" r="3" fill="#C4A27A" opacity="0.6"/>
+                        <circle cx="140" cy="32" r="3" fill="#C4A27A" opacity="0.6"/>
+                    </svg>
+                </div>
+                <div class="title-section">
+                    <h1>Selamat Hari Raya</h1>
+                    <h2>Idul Fitri 1447 H</h2>
+                </div>
+                <div class="maaf-section">
+                    <p class="arabic-main">تَقَبَّلَ اللَّهُ مِنَّا وَمِنْكُمْ</p>
+                    <p class="maaf-latin">Kami Dari Keluarga R. Siregar</p>
+                </div>
+                <div class="divider-pattern">✦ ✧ ✦</div>
+                <div class="message-section">
+                    <p>Selamat Lebaran dari kami sekeluarga! Minal aidin wal faizin, mohon maaf lahir dan batin.</p>
+                    <p>Semoga cahaya kemenangan ini membawa keberkahan dan ketenangan bagi kita semua. Terima kasih atas jalinan persaudaraan yang luar biasa selama ini.</p>
+                    <p class="spacer"></p>
+                    <p>Semoga kita semua dipertemukan kembali dengan Ramadhan berikutnya dalam keadaan sehat walafiat.</p>
+                    <p class="pesan-pantun">Beli kopiah di pasar pagi,<br>Dipakai shalat Id ke masjid raya.<br>Bersihkan hati sucikan diri,<br>Selamat Idul Fitri untuk kita semua!</p>
+                </div>
+                <div class="footer">
+                    <div class="footer-decoration"></div>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/mjuffrisiregar" target="_blank"
+                           class="icon linkedin" id="linkedinIcon" data-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://wa.me/6282311999416" target="_blank"
+                           class="icon whatsapp" id="whatsappIcon" data-label="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="https://qr.dana.id/v1/281012012022063074854372" target="_blank"
+                           class="icon dana" id="danaIcon" data-label="DANA">
+                            <i class="fas fa-wallet"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="back-button-wrapper">
+            <button class="back-button" id="backButton">
+                <i class="fas fa-home"></i> Kembali ke Halaman Utama
+            </button>
+        </div>
+    </div>
+
+</div>
+
+<button class="sound-btn" id="soundBtn" title="Nyalakan/Matikan Musik">
+    <i class="fas fa-volume-up" id="soundIcon"></i>
+</button>
+<div class="loading-toast" id="loadingToast">Memuat...</div>
+<script src="script.js"></script>
+</body>
+</html>
