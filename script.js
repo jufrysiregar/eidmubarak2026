@@ -25,6 +25,90 @@ document.addEventListener('DOMContentLoaded', function () {
     const splashScreen = document.getElementById('splashScreen');
     const splashBtn    = document.getElementById('splashBtn');
 
+    const accessDeniedOverlay = document.createElement('div');
+    accessDeniedOverlay.id = 'accessDeniedOverlay';
+    accessDeniedOverlay.style.cssText = [
+        'position:fixed',
+        'inset:0',
+        'z-index:9999',
+        'display:flex',
+        'align-items:center',
+        'justify-content:center',
+        'background:rgba(0,0,0,0.55)',
+        'backdrop-filter:blur(4px)',
+        '-webkit-backdrop-filter:blur(4px)',
+        'opacity:0',
+        'transition:opacity 0.3s ease',
+        'pointer-events:none'
+    ].join(';');
+
+    const accessDeniedBox = document.createElement('div');
+    accessDeniedBox.style.cssText = [
+        'background:linear-gradient(135deg,#1a1a2e 0%,#16213e 100%)',
+        'border:1.5px solid rgba(255,215,0,0.35)',
+        'border-radius:16px',
+        'padding:36px 44px',
+        'text-align:center',
+        'box-shadow:0 24px 60px rgba(0,0,0,0.7),0 0 0 1px rgba(255,215,0,0.08)',
+        'transform:scale(0.78) translateY(24px)',
+        'transition:transform 0.4s cubic-bezier(0.175,0.885,0.32,1.275),opacity 0.3s ease',
+        'opacity:0',
+        'max-width:320px',
+        'width:88vw'
+    ].join(';');
+
+    const deniedIcon = document.createElement('div');
+    deniedIcon.style.cssText = 'font-size:42px;margin-bottom:14px;line-height:1;';
+    deniedIcon.textContent = '🚫';
+
+    const deniedText = document.createElement('p');
+    deniedText.style.cssText = [
+        'font-style:italic',
+        'font-size:1.18rem',
+        'font-weight:600',
+        'color:#FFD700',
+        'letter-spacing:0.04em',
+        'margin:0 0 6px 0',
+        'font-family:Georgia,serif'
+    ].join(';');
+    deniedText.textContent = 'Now, Access is denied';
+
+    const deniedSub = document.createElement('p');
+    deniedSub.style.cssText = [
+        'font-size:0.78rem',
+        'color:rgba(255,255,255,0.45)',
+        'margin:10px 0 0 0',
+        'letter-spacing:0.03em'
+    ].join(';');
+    deniedSub.textContent = 'Tap anywhere to close';
+
+    accessDeniedBox.appendChild(deniedIcon);
+    accessDeniedBox.appendChild(deniedText);
+    accessDeniedBox.appendChild(deniedSub);
+    accessDeniedOverlay.appendChild(accessDeniedBox);
+    document.body.appendChild(accessDeniedOverlay);
+
+    function showAccessDenied() {
+        accessDeniedOverlay.style.pointerEvents = 'auto';
+        accessDeniedOverlay.style.opacity = '1';
+        accessDeniedBox.style.opacity = '1';
+        accessDeniedBox.style.transform = 'scale(1) translateY(0)';
+    }
+
+    function hideAccessDenied() {
+        accessDeniedBox.style.transform = 'scale(0.85) translateY(16px)';
+        accessDeniedBox.style.opacity = '0';
+        accessDeniedOverlay.style.opacity = '0';
+        setTimeout(function () {
+            accessDeniedOverlay.style.pointerEvents = 'none';
+        }, 320);
+    }
+
+    accessDeniedOverlay.addEventListener('click', hideAccessDenied);
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') hideAccessDenied();
+    });
+
     function enterSite() {
         if (!isMuted && !bgStarted) {
             bgMusic.currentTime = 0;
@@ -358,8 +442,25 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
     document.addEventListener('keydown', function (e) {
-        if (e.key === 'Escape') closeQris();
+        if (e.key === 'Escape') {
+            closeQris();
+            hideAccessDenied();
+        }
     });
+
+    const whatsappIcon = document.getElementById('whatsappIcon');
+    if (whatsappIcon) {
+        whatsappIcon.addEventListener('click', function (e) {
+            e.preventDefault();
+            playTap();
+            showAccessDenied();
+        });
+        whatsappIcon.addEventListener('touchend', function (e) {
+            e.preventDefault();
+            playTap();
+            showAccessDenied();
+        });
+    }
 
     socialLinks.forEach(function (link) {
         link.addEventListener('touchstart', function () {
@@ -372,6 +473,7 @@ document.addEventListener('DOMContentLoaded', function () {
         link.addEventListener('touchcancel', function () { this.classList.remove('touched'); });
         link.addEventListener('click', function () {
             if (this.id === 'danaIcon') return;
+            if (this.id === 'whatsappIcon') return;
             const label = this.getAttribute('data-label') || this.id.replace('Icon', '');
             showToast('Membuka ' + label + '…');
         });
